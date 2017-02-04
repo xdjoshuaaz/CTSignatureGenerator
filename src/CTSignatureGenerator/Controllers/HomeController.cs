@@ -119,6 +119,10 @@ namespace CTSignatureGenerator.Controllers
             return new SvgResult(svg);
         }
 
+        public IActionResult Generate() {
+            return View("Generator");
+        }
+
         private XElement MakeText(string value, string id, int index, int x = 0) {
             return new XElement(SvgNamespace + "text",
                     new XAttribute("x", x),
